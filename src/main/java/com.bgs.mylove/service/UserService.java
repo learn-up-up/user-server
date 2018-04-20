@@ -2,12 +2,14 @@ package com.bgs.mylove.service;
 
 import com.bgs.mylove.entity.User;
 import com.bgs.mylove.mapper.UserMapper;
+import com.bgs.mylove.result.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class UserService {
@@ -31,5 +33,10 @@ public class UserService {
 		DateFormat dateFormat =  new SimpleDateFormat("yyyyMMddHHmmss");
 		String id = dateFormat.format(new Date());
 		return id;
+	}
+
+	public PageBean<User> queryByPhone(String phone) {
+		List<User> list = userMapper.select(phone);
+		return new PageBean<>(0,20,1,list.size(),list);
 	}
 }

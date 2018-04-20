@@ -10,3 +10,11 @@ spring:
     max-idle: 8
     min-idle: 8
     initial-size: 10
+logging:
+  level:
+    org:
+      springframework: WARN
+      dao: DEBUG
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
