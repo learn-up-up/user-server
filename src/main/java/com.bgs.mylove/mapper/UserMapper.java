@@ -18,6 +18,6 @@ public interface UserMapper {
 	@Insert("insert into mylove_user.user(id,username,password,phone,email,create_time) values(#{id},#{username},#{password},#{phone},#{email},now())")
 	void insert(User user);
 
-	@Select("select * from mylove_user.user u where u.username like '%${phone}%'")
+	@Select("select * from mylove_user.user u where u.phone like '%${phone}%'")
 	List<User> select(@Param("phone") String phone);
 }
