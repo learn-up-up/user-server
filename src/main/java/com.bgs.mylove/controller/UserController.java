@@ -4,10 +4,11 @@ import com.bgs.mylove.entity.User;
 import com.bgs.mylove.result.PageBean;
 import com.bgs.mylove.result.ResultBean;
 import com.bgs.mylove.service.UserService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,8 +18,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+//    Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static final Logger logger = LogManager.getLogger(UserController.class);
+
     @GetMapping("/login")
     public String login() {
+        logger.info("get into login");
         return "hello word";
     }
 

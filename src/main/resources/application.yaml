@@ -10,6 +10,25 @@ spring:
     max-idle: 8
     min-idle: 8
     initial-size: 10
+  redis:
+    host: 127.0.0.1 # Redis server host.
+    password: wjw993027 # Login password of the redis server.
+    port: 6379 # Redis server port.
+    ssl: false # Whether to enable SSL support.
+    timeout: 5000ms # Connection timeout.
+    lettuce:
+      pool:
+        max-active: 8 # Maximum number of connections that can be allocated by the pool at a given time. Use a negative value for no limit.
+        max-idle: 8 # Maximum number of "idle" connections in the pool. Use a negative value to indicate an unlimited number of idle connections.
+        max-wait: -1ms # Maximum amount of time a connection allocation should block before throwing an exception when the pool is exhausted. Use a negative value to block indefinitely.
+        min-idle: 0 # Target for the minimum number of idle connections to maintain in the pool. This setting only has an effect if it is positive.
+    jedis:
+      pool:
+        max-active: 8 # Maximum number of connections that can be allocated by the pool at a given time. Use a negative value for no limit.
+        max-idle: 8 # Maximum number of "idle" connections in the pool. Use a negative value to indicate an unlimited number of idle connections.
+        max-wait: -1ms # Maximum amount of time a connection allocation should block before throwing an exception when the pool is exhausted. Use a negative value to block indefinitely.
+        min-idle: 0
+
 logging:
   level:
     org:
@@ -18,3 +37,4 @@ logging:
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
