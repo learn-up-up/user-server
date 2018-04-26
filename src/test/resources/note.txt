@@ -1,0 +1,1 @@
+1. redis server need to configure password every time, or exception would be represent.
