@@ -52,3 +52,9 @@ eureka:
     metadata-map:
       wjw-metadata: 自定义元数据训练
 
+#actuator/info
+info:
+  app:
+    name: mylove.user-server
+    version: v1.0.0
+  
