@@ -1,4 +1,4 @@
-package com.bgs.mylove;
+package com.bgs.mylove.userserver;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.ConfigurationProperties;

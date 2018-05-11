@@ -1,8 +1,8 @@
-package com.bgs.mylove.service;
+package com.bgs.mylove.userserver.service;
 
-import com.bgs.mylove.entity.User;
-import com.bgs.mylove.mapper.UserMapper;
-import com.bgs.mylove.result.PageBean;
+import com.bgs.mylove.userserver.entity.User;
+import com.bgs.mylove.userserver.mapper.UserMapper;
+import com.bgs.mylove.api.base.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

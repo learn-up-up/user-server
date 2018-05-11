@@ -1,4 +1,4 @@
-package com.bgs.mylove.entity;
+package com.bgs.mylove.userserver.entity;
 
 import java.util.Date;
 

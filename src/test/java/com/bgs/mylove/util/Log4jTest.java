@@ -1,6 +1,5 @@
 package com.bgs.mylove.util;
 
-import com.bgs.mylove.UserServerApplication;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Rule;
@@ -15,20 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
 
-/**
- * <pre>
- * *********************************************
- * Copyright BAIBU.
- * All rights reserved.
- * Description: ${添加描述}
- * HISTORY:
- * *********************************************
- *  Version       Date      Author    Desc
- *   v1.0     2018-04-25      wujianwen  ${添加描述}
- *
- * *********************************************
- * </pre>
- */
+
 @RunWith(SpringRunner.class)
 @SpringBootTest/*(classes = UserServerApplication.class)*/
 @AutoConfigureMockMvc

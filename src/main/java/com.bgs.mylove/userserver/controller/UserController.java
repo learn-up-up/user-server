@@ -1,9 +1,9 @@
-package com.bgs.mylove.controller;
+package com.bgs.mylove.userserver.controller;
 
-import com.bgs.mylove.entity.User;
-import com.bgs.mylove.result.PageBean;
-import com.bgs.mylove.result.ResultBean;
-import com.bgs.mylove.service.UserService;
+import com.bgs.mylove.userserver.entity.User;
+import com.bgs.mylove.api.base.PageBean;
+import com.bgs.mylove.api.base.ResultBean;
+import com.bgs.mylove.userserver.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

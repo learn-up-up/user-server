@@ -1,6 +1,6 @@
-package com.bgs.mylove.mapper;
+package com.bgs.mylove.userserver.mapper;
 
-import com.bgs.mylove.entity.User;
+import com.bgs.mylove.userserver.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
