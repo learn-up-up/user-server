@@ -37,3 +37,18 @@ CREATE TABLE `user_status` (
   `name` varchar(10) DEFAULT NULL COMMENT 'name of value',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='status of user';
+
+ALTER TABLE mylove_user.user RENAME TO mylove_user.user_profile;
+
+CREATE TABLE `user_safe_conf` (
+  `user_id` VARCHAR(16) NOT NULL ,
+  `is_safe_question` BIT(1) DEFAULT 0 COMMENT '0:no,1:yes',
+  `is_login_notify` BIT(1) DEFAULT 0 COMMENT  'notify for login',
+  PRIMARY KEY (`user_id`)
+)ENGINE = InnoDB DEFAULT CHARSET=utf8 COMMENT='configuration for user safe';
+
+CREATE TABLE `user_label` (
+  `user_id` VARCHAR(16) NOT NULL
+)
+
+
