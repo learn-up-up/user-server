@@ -25,18 +25,18 @@ public class UserService {
 	public String createOne(User user) {
 		String id = getId();
 		user.setId(id);
-		userMapper.insert(user);
+		userMapper.addOne(user);
 		return id;
 	}
 
-	public String getId() {
+	private String getId() {
 		DateFormat dateFormat =  new SimpleDateFormat("yyyyMMddHHmmss");
 		String id = dateFormat.format(new Date());
 		return id;
 	}
 
 	public PageBean<User> queryByPhone(String phone) {
-		List<User> list = userMapper.select(phone);
+		List<User> list = userMapper.getListByPhone(phone);
 		return new PageBean<>(0,20,1,list.size(),list);
 	}
 }

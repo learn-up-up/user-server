@@ -34,7 +34,8 @@ spring:
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
+#  type-handlers-package:
+#  type-aliases-package:
 logging:
   level:
     org:
